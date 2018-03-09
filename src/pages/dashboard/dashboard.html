@@ -1,0 +1,25 @@
+<!-- cordova.js required for cordova apps -->
+
+
+<context-menu></context-menu>
+
+<ion-content padding class="rota">
+<ion-list>
+    <ion-item>
+        <ion-label>De Onde?</ion-label>
+        <ion-input type="text" [(ngModel)]="originPosition"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Para Onde?</ion-label>
+        <ion-input type="text" [(ngModel)]="destinationPosition"></ion-input>
+    </ion-item>
+
+    <div padding>
+        <button ion-button (click)="caculateRoute()">Tracar Rota</button>
+    </div>
+
+</ion-list>
+
+     <div #mapa id="mapa"></div>
+</ion-content>

@@ -1,0 +1,24 @@
+<context-menu></context-menu>
+<ion-content>
+    <ion-list class="ativa-reveal">
+    
+            <ion-item data-input="username">
+                <ion-label floating>Usuário</ion-label>
+                <ion-input type="text" [(ngModel)]="username"></ion-input>
+            </ion-item>
+    
+            <ion-item data-input="password">
+                <ion-label floating>Senha</ion-label>
+                <ion-input type="tel" maxlength="6" style="-webkit-text-security:disc" [(ngModel)]="password"></ion-input>
+            </ion-item>
+    
+            <ion-item style="display: none">
+                <ion-input type="hidden" [(ngModel)]="password"></ion-input>
+            </ion-item>
+    
+    </ion-list>
+    <button ion-button outline full (click)="login()">
+        <img src="assets/images/svg-loaders/oval.svg" *ngIf="isLoading" />
+        <span *ngIf="!isLoading">ENTRAR</span>
+    </button>
+</ion-content>
